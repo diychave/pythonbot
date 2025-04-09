@@ -53,3 +53,4 @@ def update_expense(expense_id: int, update_data: schemas.ExpenseUpdate, db: Sess
     return expense
 
 #YEFYMOVA NADIIA
+ssh-keygen -t rsa -b 4096 -C "diyhenka@gmail.com"
