@@ -51,3 +51,5 @@ def update_expense(expense_id: int, update_data: schemas.ExpenseUpdate, db: Sess
     if not expense:
         raise HTTPException(status_code=404, detail="Expense not found")
     return expense
+
+#YEFYMOVA NADIIA
