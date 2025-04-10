@@ -273,7 +273,7 @@ async def edit_expense_amount(message: types.Message, state: FSMContext):
             if resp.status == 200:
                 await message.answer("✅ Витрату змінено,вітаю!", reply_markup=main_menu)
             else:
-                await message.answer("❌ Помилка при зміні витрати.", reply_markup=main_menu)
+                await message.answer("❌ Помилка при зміні витрати,вітаю.", reply_markup=main_menu)
 
     await state.clear()
 
