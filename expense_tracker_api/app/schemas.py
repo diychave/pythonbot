@@ -1,21 +1,19 @@
 from pydantic import BaseModel
 from datetime import date
 
+
 class ExpenseBase(BaseModel):
-    title: str
-    date: date
+    name: str
     amount_uah: float
+    amount_usd: float
+    date: date
 
 class ExpenseCreate(ExpenseBase):
     pass
 
-class ExpenseUpdate(BaseModel):
-    title: str
-    amount_uah: float
 
 class Expense(ExpenseBase):
     id: int
-    amount_usd: float
 
     class Config:
         orm_mode = True
