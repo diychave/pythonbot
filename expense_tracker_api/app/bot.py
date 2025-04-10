@@ -271,7 +271,7 @@ async def edit_expense_amount(message: types.Message, state: FSMContext):
     async with aiohttp.ClientSession() as session:
         async with session.put(f"{API_URL}/expenses/{expense_id}", json=updated_data) as resp:
             if resp.status == 200:
-                await message.answer("✅ Витрату змінено!", reply_markup=main_menu)
+                await message.answer("✅ Витрату змінено,вітаю!", reply_markup=main_menu)
             else:
                 await message.answer("❌ Помилка при зміні витрати.", reply_markup=main_menu)
 
